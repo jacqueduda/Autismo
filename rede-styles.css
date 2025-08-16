@@ -1,0 +1,242 @@
+/* rede-style.css - estilo para a página Rede de Apoio */
+:root {
+    --bg: #ffffff;
+    --panel: #ffffff;
+    --text: #040a0c;
+    --muted: #516f75;
+    --accent: #6fb3d8;
+    /* azul suave */
+    --card-shadow: 0 10px 30px rgba(16, 24, 32, 0.06);
+    --container: 1100px;
+    --radius: 12px;
+}
+
+* body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url(./assets/ChatGPT\ Image\ 9\ de\ ago.\ de\ 2025\,\ 17_47_30.png);
+    color: #1e2a3a;
+    line-height: 1.6;
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    background: #fff;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 70px;
+    margin: 0px 5px;
+}
+
+.logo span {
+    font-weight: 20px;
+    color: #1e2a3a;
+    font-size: 30px;
+    margin-bottom: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #1e2a3a;
+    font-weight: 700;
+}
+
+nav a:hover {
+    color: #2b6cb0;
+}
+
+.container {
+    width: calc(100% - 40px);
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 28px 0;
+}
+
+.site-header {
+    background: transparent;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(18, 49, 58, 0.04)
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.brand {
+    text-decoration: none;
+    font-weight: 700;
+    color: #040a0c;
+    font-size: 1.1rem
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+    margin: 5px;
+    padding: 0
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--muted);
+    font-weight: 500
+}
+
+.nav a.active,
+.nav a:hover {
+    color: var(--accent)
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 28px;
+    align-items: start;
+    padding-bottom: 40px
+}
+
+.intro h1 {
+    font-size: 1.8rem;
+    margin: 6px 8px 8px
+}
+
+.intro p {
+    color: #040a0c;
+    margin: 6px 10px
+}
+
+.list {
+    display: grid;
+    grid-template-columns: 360px 360px 360px;
+    gap: 30px
+}
+
+.item {
+    background: #eef7f8;
+    border-radius: var(--radius);
+    padding: 16px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(18, 49, 58, 0.03)
+}
+
+.item h3 {
+    margin: 0 0 6px;
+    color: var(--text)
+}
+
+.item p {
+    margin: 4px 0;
+    color: var(--muted)
+}
+
+.item a {
+    color: var(--accent);
+    text-decoration: none
+}
+
+.item a:hover {
+    text-decoration: underline
+}
+
+.map-aside {
+    position: sticky;
+    top: 88px;
+    background: transparent;
+    padding: 8px;
+    border-radius: 8px
+}
+
+.map-wrapper {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(18, 49, 58, 0.03)
+}
+
+.map-wrapper iframe {
+    width: 100%;
+    height: 320px;
+    border: 0;
+    display: block
+}
+
+.site-footer {
+    background: transparent;
+    padding: 18px 0;
+    border-top: 1px solid rgba(18, 49, 58, 0.04)
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px
+}
+
+.footer {
+    background: #e1edf8;
+    padding: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* responsivo */
+@media (max-width:980px) {
+    .main-grid {
+        grid-template-columns: 1fr;
+        gap: 20px
+    }
+
+    .map-aside {
+        position: relative;
+        top: 0
+    }
+
+    /* Responsivo */
+
+    .banner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner-texto {
+        max-width: 100%;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .header {
+        flex-direction: column;
+    }
+
+    .list {
+        grid-template-columns: 1fr;
+        gap: 20px
+    }
+}
